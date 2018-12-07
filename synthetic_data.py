@@ -44,7 +44,7 @@ if __name__ == '__main__':
     r1, r2, r3 = 1, 0.75, 0.25
     x_cord, y_cord = [], []
     i = 0
-    while len(x_cord) < 300:
+    while len(x_cord) < 1000:
         x, y = np.random.uniform(-1, 1, 1), np.random.uniform(-1, 1, 1)
         if ((x**2 < r1**2 - y**2) and (x**2 > r2**2 - y**2)) or (x**2 < r3**2 - y**2):
             x_cord.append(x[0])
@@ -70,6 +70,16 @@ if __name__ == '__main__':
     plt_show(x, y, 'The first letter of both your first names - AF')
 
 
+# suggestion for A
+x_cord, y_cord = [], []
+i = 0
+while len(x_cord) < 300:
+    x, y = np.random.uniform(-3, 3, 1), np.random.uniform(-7, 3, 1)
+    if ((y > -3*x) and (y < -3*x + 3)) \
+            or (((y > 3*x) and (y < 3*x + 3))) \
+            or ((y > -5) and (y < -3) and (x > -2) and (x < 2)):
+        x_cord.append(x[0])
+        y_cord.append(y[0])
+    i += 1
 
-
-
+plt_show(x_cord, y_cord, 'CURE Circles')
