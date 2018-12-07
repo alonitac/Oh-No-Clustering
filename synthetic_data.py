@@ -41,15 +41,14 @@ if __name__ == '__main__':
     plt_show(x_cord, y_cord, 'Three Gaussians')
 
     # (d)
-    x, y = np.random.uniform(-1, 1, N), np.random.uniform(-1, 1, N)
     r1, r2, r3 = 1, 0.75, 0.25
-
     x_cord, y_cord = [], []
     i = 0
     while len(x_cord) < 300:
-        if ((x[i]**2 < r1**2 - y[i]**2) and (x[i]**2 > r2**2 - y[i]**2)) or (x[i]**2 < r3**2 - y[i]**2):
-            x_cord.append(x[i])
-            y_cord.append(y[i])
+        x, y = np.random.uniform(-1, 1, 1), np.random.uniform(-1, 1, 1)
+        if ((x**2 < r1**2 - y**2) and (x**2 > r2**2 - y**2)) or (x**2 < r3**2 - y**2):
+            x_cord.append(x[0])
+            y_cord.append(y[0])
         i += 1
 
     plt_show(x_cord, y_cord, 'CURE Circles')
