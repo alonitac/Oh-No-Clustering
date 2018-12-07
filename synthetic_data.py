@@ -28,6 +28,19 @@ if __name__ == '__main__':
 
     # (d)
     # to be implemented
+    x, y = np.random.uniform(-1, 1, N), np.random.uniform(-1, 1, N)
+    r1, r2, r3 = 1, 0.75, 0.25
+
+    x_cord, y_cord = [], []
+    i = 0
+    while (len(x_cord) < 300):
+        if ((x[i]**2 < r1**(2) - y[i]**2) and (x[i]**2 > r2**(2) - y[i]**2)) or (x[i]**2 < r3**(2) - y[i]**2):
+            x_cord.append(x[i])
+            y_cord.append(y[i])
+        i += 1
+
+    plt_show(x_cord, y_cord, 'circle')
+
 
     # (e)
     # sample from F
