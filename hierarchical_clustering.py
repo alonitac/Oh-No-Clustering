@@ -3,7 +3,6 @@ from scipy.cluster.hierarchy import dendrogram, linkage, fcluster
 import numpy as np
 import json
 
-# recommended reading https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/
 
 if __name__ == '__main__':
 
@@ -25,8 +24,8 @@ if __name__ == '__main__':
     plt.show()
 
     # perform hierarchical clustering (divisive)
-    levels = linkage(points.T, 'centroid')
-
+    levels = linkage(points.T, 'complete')
+    # levels = linkage(points.T, 'centroid')
     # plot distances as function of level
     plt.plot(range(n-1), levels[:, 2])
     plt.title('Centroid distances')
@@ -53,7 +52,3 @@ if __name__ == '__main__':
     plt.title('The clusters for k={}'.format(5))
     plt.scatter(points, [0]*points.shape[1], c=clusters, cmap='Set1')
     plt.show()
-
-
-
-
