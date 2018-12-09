@@ -24,11 +24,12 @@ if __name__ == '__main__':
     plt.show()
 
     # perform hierarchical clustering (divisive)
-    levels = linkage(points.T, 'complete')
-    # levels = linkage(points.T, 'centroid')
+    levels = linkage(points.T, 'centroid')     # centroids the closest, part (a)
+    # levels = linkage(points.T, 'complete')     # smallest diameter, part (b)
+
     # plot distances as function of level
     plt.plot(range(n-1), levels[:, 2])
-    plt.title('Centroid distances')
+    plt.title('Distance between the Clusters merged in that Step')
     plt.xlabel('Level')
     plt.ylabel('Distance')
     plt.show()
