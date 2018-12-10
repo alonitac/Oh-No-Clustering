@@ -28,6 +28,7 @@ if __name__ == '__main__':
     # levels = linkage(points.T, 'complete')     # smallest diameter, part (b)
 
     # plot distances as function of level
+    plt.figure(figsize=(8, 5))
     plt.plot(range(n-1), levels[:, 2])
     plt.title('Distance between the Clusters merged in that Step')
     plt.xlabel('Level')
@@ -37,6 +38,7 @@ if __name__ == '__main__':
     # plot how many clusters for certain distance
     m = levels[-1, 2]  # last merging distance
 
+    plt.figure(figsize=(8, 5))
     plt.title('Number of clusters for m={}'.format(int(m)))
     plt.xlabel('Index')
     plt.ylabel('Distance')
