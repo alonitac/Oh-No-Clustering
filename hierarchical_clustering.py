@@ -51,7 +51,7 @@ if __name__ == '__main__':
     # retrieve the clusters
     k = 5
     clusters = fcluster(levels, k, criterion='maxclust')
-    plt.figure()
-    plt.title('The clusters for k={}'.format(5))
+    plt.figure(figsize=(8, 2))
+    plt.title('The clusters for k={}, centroid method'.format(5))
     plt.scatter(points, [0]*points.shape[1], c=clusters, cmap='Set1')
     plt.show()
