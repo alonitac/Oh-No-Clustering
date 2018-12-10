@@ -3,7 +3,7 @@
 ### Problem 3
 
 <center>
-<img src="https://github.com/alonitac/Oh-No-Clustering/blob/master/syn_data_unifrom.png">
+<img src="https://github.com/alonitac/Oh-No-Clustering/blob/master/syn_data_uniform.png">
 <img src="https://github.com/alonitac/Oh-No-Clustering/blob/master/syn_data_gaussian.png">
 <img src="https://github.com/alonitac/Oh-No-Clustering/blob/master/syn_data_3gaussian.png">
 <img src="https://github.com/alonitac/Oh-No-Clustering/blob/master/syn_data_circle.png">
